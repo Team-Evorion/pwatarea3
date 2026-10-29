@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ejercicio 1: menú de navegación desplegable creado con HTML, CSS y JavaScript.">
+  <meta name="author" content="Team-Evorion">
+  <title>Menú desplegable | Team-Evorion</title>
+  <link rel="stylesheet" href="css/ej01.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Team-Evorion, ir al inicio">
+        <span class="brand-symbol" aria-hidden="true">TE</span>
+        <span class="brand-name">Team-Evorion</span>
+      </a>
+
+      <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="sr-only">Abrir menú principal</span>
+        <span class="toggle-line" aria-hidden="true"></span>
+        <span class="toggle-line" aria-hidden="true"></span>
+      </button>
+
+      <div class="primary-nav" id="primary-nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#inicio">Inicio</a></li>
+
+          <li class="dropdown" data-dropdown>
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-soluciones">
+              Soluciones
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+            </button>
+
+            <div class="dropdown-panel panel-wide" id="menu-soluciones" data-panel hidden>
+              <p class="panel-label">Explorar soluciones</p>
+              <div class="panel-grid">
+                <a class="menu-card" href="#funcionamiento">
+                  <span class="menu-icon icon-blue" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M4 5h12M4 10h12M4 15h7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"/></svg></span>
+                  <span><strong>Navegación clara</strong><small>Opciones organizadas y fáciles de encontrar.</small></span>
+                  <span class="menu-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="menu-card" href="#adaptable">
+                  <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 17h6M10 14v3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"/></svg></span>
+                  <span><strong>Diseño adaptable</strong><small>Una experiencia consistente en cualquier pantalla.</small></span>
+                  <span class="menu-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="menu-card" href="#accesible">
+                  <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="10" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M4 8h12M10 8v8M6.5 17l3.5-5 3.5 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg></span>
+                  <span><strong>Acceso por teclado</strong><small>Control con flechas, Escape, Inicio y Fin.</small></span>
+                  <span class="menu-arrow" aria-hidden="true">↗</span>
+                </a>
+
+                <a class="menu-card" href="#tecnologias">
+                  <span class="menu-icon" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="m7 5-5 5 5 5M13 5l5 5-5 5M12 3 8 17" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg></span>
+                  <span><strong>Código organizado</strong><small>HTML, CSS y JavaScript en archivos separados.</small></span>
+                  <span class="menu-arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="dropdown" data-dropdown>
+            <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="menu-recursos">
+              Recursos
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/></svg>
+            </button>
+
+            <div class="dropdown-panel panel-compact" id="menu-recursos" data-panel hidden>
+              <p class="panel-label">Tecnologías utilizadas</p>
+              <a class="resource-link" href="#html"><span class="code-mark">H</span><span><strong>HTML</strong><small>Estructura semántica</small></span></a>
+              <a class="resource-link" href="#css"><span class="code-mark">C</span><span><strong>CSS</strong><small>Presentación visual</small></span></a>
+              <a class="resource-link" href="#javascript"><span class="code-mark">JS</span><span><strong>JavaScript</strong><small>Comportamiento dinámico</small></span></a>
+            </div>
+          </li>
+
+          <li><a class="nav-link" href="#funcionamiento">Proceso</a></li>
+          <li><a class="nav-link" href="#autor">Autor</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a class="back-index" href="../index.html" aria-label="Volver al menú principal de Team-Evorion">
+            <span aria-hidden="true">←</span> Menú principal
+          </a>
+          <a class="nav-cta" href="#prueba">Probar el menú <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="kicker"><span></span> Ejercicio 01 · HTML CSS JavaScript</p>
+        <h1>Un menú que guía<br>sin distraer.</h1>
+        <p class="hero-lead">
+          Navegación desplegable diseñada para descubrir opciones de forma rápida, clara y accesible.
+          Activa <strong>Soluciones</strong> o <strong>Recursos</strong> en la barra superior para probarla.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#prueba">Ver cómo funciona <span aria-hidden="true">→</span></a>
+          <a class="button button-light" href="#tecnologias">Explorar el código</a>
+        </div>
+      </div>
+
+      <div class="hero-demo" aria-label="Representación visual del menú desplegable">
+        <div class="demo-window">
+          <div class="demo-toolbar">
+            <span class="demo-logo">TE</span>
+            <span>Soluciones⌄</span>
+            <span>Recursos⌄</span>
+            <span class="demo-pill">Explorar</span>
+          </div>
+          <div class="demo-menu">
+            <p>EXPLORAR SOLUCIONES</p>
+            <div><span class="demo-square blue"></span><span><b>Navegación clara</b><small>Todo en su lugar.</small></span><i>↗</i></div>
+            <div><span class="demo-square"></span><span><b>Diseño adaptable</b><small>De escritorio a móvil.</small></span><i>↗</i></div>
+            <div><span class="demo-square"></span><span><b>Acceso por teclado</b><small>Sin barreras.</small></span><i>↗</i></div>
+          </div>
+        </div>
+        <p class="demo-caption"><span>01</span> El contenido adicional aparece únicamente cuando se solicita.</p>
+      </div>
+    </section>
+
+    <section class="manifesto" id="prueba">
+      <p class="section-number">01 / INTERACCIÓN</p>
+      <div>
+        <h2>Oculto al inicio.<br>Visible al hacer clic.</h2>
+        <p>El menú cumple el objetivo principal del ejercicio: las opciones adicionales permanecen ocultas hasta que el usuario activa el elemento principal.</p>
+        <a href="#inicio">Volver y probar <span aria-hidden="true">↑</span></a>
+      </div>
+    </section>
+
+    <section class="steps" id="funcionamiento">
+      <div class="section-intro">
+        <p class="section-number">02 / FUNCIONAMIENTO</p>
+        <h2>Tres movimientos.<br>Una interacción natural.</h2>
+      </div>
+
+      <ol class="step-list">
+        <li><span class="step-index">01</span><div><h3>Activa</h3><p>Haz clic en uno de los botones de la navegación principal.</p></div></li>
+        <li><span class="step-index">02</span><div><h3>Explora</h3><p>Revisa las opciones que aparecen sin abandonar ni recargar la página.</p></div></li>
+        <li><span class="step-index">03</span><div><h3>Cierra</h3><p>Selecciona una opción, presiona Escape o haz clic fuera del menú.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="details" id="tecnologias">
+      <div class="details-heading">
+        <p class="section-number">03 / CONSTRUCCIÓN</p>
+        <h2>Tres archivos.<br>Responsabilidades claras.</h2>
+      </div>
+
+      <div class="technology-grid">
+        <article id="html"><p class="tech-code">01 — HTML</p><h3>Estructura</h3><p>Botones, listas, enlaces y atributos ARIA forman una navegación comprensible.</p></article>
+        <article id="css"><p class="tech-code">02 — CSS</p><h3>Presentación</h3><p>La jerarquía visual, el movimiento y el diseño adaptable mantienen el menú legible.</p></article>
+        <article id="javascript"><p class="tech-code">03 — JS</p><h3>Comportamiento</h3><p>La lógica controla apertura, cierre, foco y navegación mediante teclado.</p></article>
+      </div>
+    </section>
+
+    <section class="accessibility" id="accesible">
+      <div><p class="section-number">04 / ACCESIBILIDAD</p><h2>Diseñado también<br>para el teclado.</h2></div>
+      <dl>
+        <div><dt><kbd>Enter</kbd></dt><dd>Abre o cierra el menú seleccionado.</dd></div>
+        <div><dt><kbd>↓</kbd> <kbd>↑</kbd></dt><dd>Recorre las opciones disponibles.</dd></div>
+        <div><dt><kbd>Home</kbd> <kbd>End</kbd></dt><dd>Salta a la primera o última opción.</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>Cierra el panel y devuelve el foco al botón.</dd></div>
+      </dl>
+    </section>
+
+    <section class="mobile-note" id="adaptable">
+      <div class="phone" aria-hidden="true">
+        <div class="phone-top"><span>TE</span><i></i><i></i></div>
+        <div class="phone-row">Soluciones <b>⌃</b></div>
+        <div class="phone-subrow"><span></span>Navegación clara</div>
+        <div class="phone-subrow"><span></span>Diseño adaptable</div>
+        <div class="phone-subrow"><span></span>Acceso por teclado</div>
+        <div class="phone-row muted">Recursos <b>⌄</b></div>
+      </div>
+      <div><p class="section-number">05 / ADAPTABLE</p><h2>La misma claridad<br>en pantallas pequeñas.</h2><p>En dispositivos móviles, la navegación se transforma en un panel vertical y conserva el comportamiento desplegable.</p></div>
+    </section>
+  </main>
+
+  <footer id="autor">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-symbol" aria-hidden="true">TE</span><span class="brand-name">Team-Evorion</span></a>
+    <p>Ejercicio 1 · Tarea Práctica 3</p>
+    <p>HTML · CSS · JavaScript</p>
+  </footer>
+
+  <script src="js/ej01.js"></script>
+</body>
+</html>
