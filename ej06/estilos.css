@@ -1,0 +1,442 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 28px 16px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #0F172A 0%,
+        #312E81 50%,
+        #6D28D9 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTENEDOR PRINCIPAL */
+
+main {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.login {
+    position: relative;
+
+    width: 100%;
+    padding: 40px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DDD6FE;
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.3),
+        0 0 35px rgba(124, 58, 237, 0.12);
+
+    overflow: hidden;
+}
+
+/* Franja superior decorativa */
+
+.login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #22D3EE,
+        #7C3AED,
+        #A855F7
+    );
+}
+
+/* ENCABEZADO DEL FORMULARIO */
+
+.login h1 {
+    margin: 0 0 12px;
+
+    color: #312E81;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.3;
+}
+
+/* Distintivo Team Evorion */
+
+.login h1::before {
+    content: "TEAM EVORION";
+    display: table;
+
+    margin: 0 auto 22px;
+    padding: 9px 18px;
+
+    background-color: #EDE9FE;
+    border: 1px solid #C4B5FD;
+    border-radius: 30px;
+
+    color: #6D28D9;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.login > p:not(.enlace-registro) {
+    margin: 0 0 30px;
+
+    color: #64748B;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* FORMULARIO */
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.login label {
+    color: #0F172A;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.login input {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    padding: 15px 16px;
+
+    background-color: #FFFFFF;
+    color: #0F172A;
+
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.login input::placeholder {
+    color: #94A3B8;
+}
+
+.login input:hover {
+    border-color: #A78BFA;
+}
+
+.login input:focus {
+    outline: none;
+    border-color: #7C3AED;
+
+    box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+
+/* BOTÓN PRINCIPAL Ingresar / Registrarse */
+
+.login button[type="submit"] {
+    width: 100%;
+
+    margin-top: 18px;
+    padding: 15px 20px;
+
+    background: linear-gradient(
+        90deg,
+        #7C3AED,
+        #6D28D9
+    );
+
+    color: #FFFFFF;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(124, 58, 237, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.login button[type="submit"]:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 24px rgba(124, 58, 237, 0.3);
+}
+
+.login button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* MOSTRAR / OCULTAR CONTRASEÑA*/
+
+.login button.mostrar-contrasena {
+    align-self: flex-end;
+
+    margin-top: -4px;
+    padding: 5px 0;
+
+    background: transparent;
+    color: #7C3AED;
+
+    border: none;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.login button.mostrar-contrasena:hover {
+    background: transparent;
+    color: #5B21B6;
+    text-decoration: underline;
+}
+
+/* ENLACES ENTRE LOGIN Y REGISTRO */
+
+.enlace-registro {
+    margin: 24px 0 0;
+
+    color: #64748B;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.enlace-registro a {
+    color: #7C3AED;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.enlace-registro a:hover {
+    color: #5B21B6;
+    text-decoration: underline;
+}
+
+/* MENSAJE DE ERROR DEL LOGIN */
+
+.mensaje-error {
+    margin: 8px 0 0;
+    padding: 13px 15px;
+
+    background-color: #FEE2E2;
+    color: #B91C1C;
+
+    border: 1px solid #FCA5A5;
+    border-radius: 10px;
+
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* VALIDADOR DE CONTRASEÑAS
+   Solo aparece en registro.php */
+
+.validador {
+    width: 100%;
+    min-width: 0;
+
+    margin-top: 10px;
+    padding: 20px;
+
+    background: linear-gradient(
+        145deg,
+        #F5F3FF,
+        #EEF2FF
+    );
+
+    border: 1px solid #C4B5FD;
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(124, 58, 237, 0.06);
+}
+
+/* Título y nivel de seguridad */
+
+.seguridad-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.seguridad-titulo strong {
+    color: #312E81;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#nivel {
+    color: #7C3AED;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* Barra de progreso */
+
+.barra-seguridad {
+    width: 100%;
+    height: 9px;
+
+    margin-bottom: 22px;
+
+    background-color: #DDD6FE;
+    border-radius: 30px;
+
+    overflow: hidden;
+}
+
+#progreso {
+    width: 0%;
+    height: 100%;
+
+    background-color: #7C3AED;
+    border-radius: 30px;
+
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Requisitos */
+
+.requisito {
+    margin: 12px 0;
+
+    color: #DC2626;
+    font-size: 13px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+.requisito:last-child {
+    margin-bottom: 0;
+}
+
+.requisito.cumplido {
+    color: #16A34A;
+}
+
+/* CONFIRMAR CONTRASEÑA */
+
+#mensaje-confirmacion {
+    margin: 2px 0;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.mensaje-exito {
+    margin: 8px 0 0;
+    padding: 13px 15px;
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* Evita el espacio vacío antes de registrar */
+
+#mensaje-confirmacion:empty {
+    display: none;
+}
+
+/*bADAPTACIÓN A CELULARES */
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px 12px;
+    }
+
+    .login {
+        padding: 30px 22px;
+        border-radius: 16px;
+    }
+
+    .login h1 {
+        font-size: 28px;
+    }
+
+    .login h1::before {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+    }
+
+    .login > p:not(.enlace-registro) {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .login input {
+        padding: 14px;
+    }
+
+    .validador {
+        padding: 16px;
+    }
+
+    .seguridad-titulo strong {
+        font-size: 13px;
+    }
+
+    .requisito {
+        font-size: 12px;
+    }
+}
