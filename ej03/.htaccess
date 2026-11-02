@@ -1,0 +1,3 @@
+<FilesMatch "^(visitas\.txt|historial\.json)$">
+    Require all denied
+</FilesMatch>

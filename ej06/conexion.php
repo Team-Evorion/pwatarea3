@@ -17,7 +17,15 @@ try {
     );
 
 } catch (PDOException $error) {
-    die("No se pudo conectar con la base de datos.");
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    $_SESSION["error_login"] =
+        "No se pudo conectar con la base de datos. Inténtalo más tarde.";
+
+    header("Location: index.php");
+    exit;
 }
 
 ?>

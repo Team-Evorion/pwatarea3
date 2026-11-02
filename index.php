@@ -44,13 +44,13 @@ if (!isset($_SESSION["usuario_id"])) {
             <div class="lista-ejercicios">
                 <a href="ej01/ej01.html" class="ejercicio"><span>01</span><h3>Menú desplegable</h3><span>&nearr;</span></a>
                 
-                <a href="ej02/ej02.html" class="ejercicio"><span>02</span><h3>Formulario de contacto</h3><span>&nearr;</span></a>
+                <a href="ej02/index.php" class="ejercicio"><span>02</span><h3>Formulario de contacto</h3><span>&nearr;</span></a>
                 
-                <a href="ej03/ej03.html" class="ejercicio"><span>03</span><h3>Contador de visitas en PHP</h3><span>&nearr;</span></a>
+                <a href="ej03/index.php" class="ejercicio"><span>03</span><h3>Contador de visitas en PHP</h3><span>&nearr;</span></a>
                 
-                <a href="ej04/ej04.html" class="ejercicio"><span>04</span><h3>Juego de adivinanzas</h3><span>&nearr;</span></a>
+                <a href="ej04/index.php" class="ejercicio"><span>04</span><h3>Juego de adivinanzas</h3><span>&nearr;</span></a>
                 
-                <a href="ej05/ej05.html" class="ejercicio"><span>05</span><h3>Galería de imágenes</h3><span>&nearr;</span></a>
+                <a href="ej05/index.php" class="ejercicio"><span>05</span><h3>Galería de imágenes</h3><span>&nearr;</span></a>
                 
                 <a href="ej06/index.php" class="ejercicio"><span>06</span><h3>Sistema de login</h3><span>&nearr;</span></a>
             </div>
