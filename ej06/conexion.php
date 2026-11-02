@@ -1,14 +1,18 @@
+
 <?php
-$servidor = "localhost";
-$usuarioBD = "root";
-$contrasenaBD = "";
-$baseDatos = "pwatarea3";
+
+$config = require __DIR__ . "/config.local.php";
+
+$servidor = $config["servidor"];
+$usuarioBD = $config["usuario"];
+$contrasenaBD = $config["contrasena"];
+$baseDatos = $config["base_datos"];
 
 try {
     $conexion = new PDO(
         "mysql:host=$servidor;dbname=$baseDatos;charset=utf8mb4",
-    $usuarioBD,
-    $contrasenaBD
+        $usuarioBD,
+        $contrasenaBD
     );
 
     $conexion->setAttribute(
@@ -27,5 +31,3 @@ try {
     header("Location: index.php");
     exit;
 }
-
-?>

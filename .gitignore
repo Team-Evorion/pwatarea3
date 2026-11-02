@@ -1,0 +1,9 @@
+# Credenciales privadas de MySQL
+/ej06/config.local.php
+
+# Respaldos de bases de datos
+*.sql
+
+# Archivos de datos generados por el contador
+/ej03/visitas.txt
+/ej03/historial.json
